@@ -11,6 +11,18 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/content/index.html'));
 });
 
+app.get('/index', (req, res) => {
+    res.sendFile(path.join(__dirname, '/content/index.html'));
+});
+
+app.get('/index.html', (req, res) => {
+    res.sendFile(path.join(__dirname, '/content/index.html'));
+});
+
+app.get('/files/promotions_slim.json', (req, res) => {
+    res.sendFile(path.join(__dirname, '/content/files/promotions_slim.json'));
+});
+
 /*// Meta start
 
 // TODO: Link with maven
