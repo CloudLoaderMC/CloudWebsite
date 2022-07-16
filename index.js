@@ -1,4 +1,5 @@
 const path = require('path');
+const fs = require('fs');
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -11,16 +12,63 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/content/index.html'));
 });
 
-app.get('/index', (req, res) => {
-    res.sendFile(path.join(__dirname, '/content/index.html'));
-});
-
-app.get('/index.html', (req, res) => {
-    res.sendFile(path.join(__dirname, '/content/index.html'));
-});
-
-app.get('/files/promotions_slim.json', (req, res) => {
-    res.sendFile(path.join(__dirname, '/content/files/promotions_slim.json'));
+app.get('*', (req, res) => {
+    let p = path.join(__dirname, '/content');
+    if (fs.existsSync(path.join(p, req.url))) {
+        res.sendFile(path.join(p, req.url));
+    }
+    else if (fs.existsSync(path.join(p, req.url, '.html'))) {
+        res.sendFile(path.join(p, req.url, '.html'));
+    }
+    else if (fs.existsSync(path.join(p, req.url + 'l'))) {
+        // For .htm -> .html
+        res.sendFile(path.join(p, req.url + 'l'));
+    }
+    else if (fs.existsSync(path.join(p, req.url, '.htm'))) {
+        res.sendFile(path.join(p, req.url, '.htm'));
+    }
+    else if (fs.existsSync(path.join(p, req.url, '.js'))) {
+        res.sendFile(path.join(p, req.url, '.js'));
+    }
+    else if (fs.existsSync(path.join(p, '/js', req.url))) {
+        res.sendFile(path.join(p, '/js', req.url));
+    }
+    else if (fs.existsSync(path.join(p, '/js', req.url, '.js'))) {
+        res.sendFile(path.join(p, '/js', req.url, '.js'));
+    }
+    else if (fs.existsSync(path.join(p, req.url, '.css'))) {
+        res.sendFile(path.join(p, req.url, '.css'));
+    }
+    else if (fs.existsSync(path.join(p, '/css', req.url))) {
+        res.sendFile(path.join(p, '/css', req.url));
+    }
+    else if (fs.existsSync(path.join(p, '/css', req.url, '.css'))) {
+        res.sendFile(path.join(p, '/css', req.url, '.css'));
+    }
+    else if (fs.existsSync(path.join(p, '/img', req.url))) {
+        res.sendFile(path.join(p, '/img', req.url));
+    }
+    else if (fs.existsSync(path.join(p, req.url, '.png'))) {
+        res.sendFile(path.join(p, req.url, '.png'));
+    }
+    else if (fs.existsSync(path.join(p, '/img', req.url, '.png'))) {
+        res.sendFile(path.join(p, '/img', req.url, '.png'));
+    }
+    else if (fs.existsSync(path.join(p, req.url, '.jpg'))) {
+        res.sendFile(path.join(p, req.url, '.jpg'));
+    }
+    else if (fs.existsSync(path.join(p, '/img', req.url, '.jpg'))) {
+        res.sendFile(path.join(p, '/img', req.url, '.jpg'));
+    }
+    else if (fs.existsSync(path.join(p, req.url, '.jpeg'))) {
+        res.sendFile(path.join(p, req.url, '.jpeg'));
+    }
+    else if (fs.existsSync(path.join(p, '/img', req.url, '.jpeg'))) {
+        res.sendFile(path.join(p, '/img', req.url, '.jpeg'));
+    }
+    else {
+        res.status(404).sendFile(path.join(__dirname, '/content/404.html'));
+    }
 });
 
 /*// Meta start
