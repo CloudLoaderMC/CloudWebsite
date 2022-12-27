@@ -1,0 +1,15 @@
+@import 'variables.css';
+
+dark-mode-toggle {
+    --dark-mode-toggle-legend-font: bold 0.85rem "Helvetica";
+    --dark-mode-toggle-label-font: 0.85rem "Helvetica";
+    --dark-mode-toggle-color: var(--fg);
+    --dark-mode-toggle-background-color: none;
+    
+    --dark-mode-toggle-dark-icon: url("sun.svg");
+    --dark-mode-toggle-light-icon: url("moon.svg");
+    --dark-mode-toggle-icon-size: 2rem;
+    --dark-mode-toggle-icon-filter: invert(100%);
+
+    font-size: 2.4rem;
+}
