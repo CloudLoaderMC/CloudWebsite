@@ -22,6 +22,9 @@ function getOppositeSpecificTheme(theme) {
     html.classList.remove('no-js');
     html.classList.add('js');
 
+    html.classList.remove(getSpecificThemeName('light'));
+    html.classList.add(getSpecificThemeName(localStorage.getItem('theme')));
+
     const defaultTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 
     doc.addEventListener('colorschemechange', (e) => {
@@ -49,7 +52,8 @@ function getOppositeSpecificTheme(theme) {
         html.classList.add(getSpecificThemeName(theme));
     });
 
-    document.querySelector('dark-mode-toggle').mode = localStorage.getItem('theme');
+    doc.querySelector('dark-mode-toggle').mode = localStorage.getItem('theme');
+    doc.dispatchEvent(new Event("colorschemechange"));
 })(document);
 
 window.onload = function() {
