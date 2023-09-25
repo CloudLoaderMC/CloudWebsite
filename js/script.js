@@ -48,11 +48,11 @@ function getOppositeSpecificTheme(theme) {
 
         html.classList.add(getSpecificThemeName(theme));
     });
+
+    document.querySelector('dark-mode-toggle').mode = localStorage.getItem('theme');
 })(document);
 
 window.onload = function() {
-    document.querySelector('dark-mode-toggle').mode = localStorage.getItem('theme');
-
     const url = 'https://meta.cloudloader.org/v1/versions/loader/';
     const headers = { 'User-Agent': 'Mozilla/5.0' };
 
