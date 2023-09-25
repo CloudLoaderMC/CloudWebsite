@@ -53,7 +53,7 @@ function getOppositeSpecificTheme(theme) {
 window.onload = function() {
     document.querySelector('dark-mode-toggle').mode = localStorage.getItem('theme');
 
-    const url = 'https://meta.cloudmc.ml/v1/versions/loader/';
+    const url = 'https://meta.cloudloader.org/v1/versions/loader/';
     const headers = { 'User-Agent': 'Mozilla/5.0' };
 
     let req = new Request(url, { headers: headers, mode: 'no-cors' });
