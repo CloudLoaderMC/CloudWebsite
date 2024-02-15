@@ -1,0 +1,64 @@
+<!-- Generated using https://timestampgenerator.com/xml-sitemap-from-list   -->
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+      <loc>https://docs.cloudloader.org/Contributing/CodingConventions.html</loc>
+      <lastmod>2005-01-01</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+</url>
+<url>
+      <loc>https://docs.cloudloader.org/Contributing/Contributing.html</loc>
+      <lastmod>2005-01-01</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+</url>
+<url>
+      <loc>https://docs.cloudloader.org/Compatibility/ModIDAliases.html</loc>
+      <lastmod>2005-01-01</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+</url>
+<url>
+      <loc>https://docs.cloudloader.org/Contributing/PullRequestGuidelines.html</loc>
+      <lastmod>2005-01-01</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+</url>
+<url>
+      <loc>https://docs.cloudloader.org/HybridMods/HybridMods.html</loc>
+      <lastmod>2005-01-01</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+</url>
+<url>
+      <loc>https://docs.cloudloader.org/Compatibility/Compatibility.html</loc>
+      <lastmod>2005-01-01</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+</url>
+<url>
+      <loc>https://docs.cloudloader.org/Compatibility/KnownIncompatibilities.html</loc>
+      <lastmod>2005-01-01</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+</url>
+<url>
+      <loc>https://docs.cloudloader.org/FAQ.html</loc>
+      <lastmod>2005-01-01</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+</url>
+<url>
+      <loc>https://docs.cloudloader.org/</loc>
+      <lastmod>2005-01-01</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+</url>
+<url>
+      <loc>https://cloudloader.org/</loc>
+      <lastmod>2005-01-01</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.5</priority>
+</url>
+</urlset>
